@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form th:action="@{calc}" method="post">
+    <div><label> First number : <input type="number" name="numberOne"/> </label></div>
+    <div><label> Second number: <input type="number" name="numberTwo"/> </label></div>
+    <div><label> Operation: <input type="text" name="operation"/> </label></div>
+    <div><input type="submit" value="Calculate"/></div>
+    <div>
+        <p th:text="'Result: '+${operation.getResult()}"></p>
+    </div>
+</form>
+</body>
+</html>
